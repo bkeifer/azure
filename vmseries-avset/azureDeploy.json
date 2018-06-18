@@ -247,6 +247,7 @@
 	"type": "Microsoft.Resources/deployments",
         "apiVersion": "2015-01-01",
 	"properties" : {
+		"mode": "Incremental",
 		"templateLink" : {
 		"uri" : "[variables('storageAccountSetupURL')]",
 		"contentVersion": "1.0.0.0"
