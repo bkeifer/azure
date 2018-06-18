@@ -85,7 +85,7 @@
         },
         "imageVersion": {
             "type": "string",
-            "defaultValue": "latest",
+            "defaultValue": "8.0.0",
             "allowedValues": [
                 "7.1.1",
 		"8.0.0"
