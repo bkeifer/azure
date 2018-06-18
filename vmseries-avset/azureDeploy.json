@@ -43,14 +43,14 @@
       },
       "dnsNameForPublicIP":{
          "type":"string",
-         "defaultValue":"azfw01-pubip",
+         "defaultValue":"azfw02-pubip",
          "metadata":{
             "description":"Globally unique DNS name to access management interface of VM-Series firewall"
          }
       },
       "vmName":{
          "type":"string",
-         "defaultValue":"azfw01",
+         "defaultValue":"azfw02",
          "metadata":{
             "description":"Name of VM-Series VM in the Azure portal"
          }
