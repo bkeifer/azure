@@ -4,17 +4,17 @@
     "parameters": {
         "location": {
             "type": "string",
+            "defaultValue": "East US",
             "metadata": {
                 "description": "region of resources"
             }
-            "defaultValue": "East US"
         },
         "newStorageAccount": {
             "type": "string",
+            "defaultValue": "desalesstorage",
             "metadata": {
                 "description": "Globally unique lowercase name of your storage account"
             }
-            "defaultValue": "desalesstorage"
         },
         "storageAccountType": {
             "type": "string",
