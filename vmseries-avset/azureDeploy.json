@@ -43,14 +43,14 @@
         },
         "dnsNameForPublicIP": {
             "type": "string",
-            "defaultValue": "azfw-pubip",
+            "defaultValue": "azfw01-pubip",
             "metadata": {
                 "description": "Globally unique DNS name to access management interface of VM-Series firewall"
             }
         },
         "vmName": {
             "type": "string",
-            "defaultValue": "azfw",
+            "defaultValue": "azfw01",
             "metadata": {
                 "description": "Name of VM-Series VM in the Azure portal"
             }
@@ -80,7 +80,7 @@
         },
         "sshKey": {
             "type": "string",
-            "defaultValue": "",
+            "defaultValue": "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAsY9kbl0z1R3Vghm9gSR8qn6GwSLs4J9WYPG6abB7/YjXPD2qyNQ8+uCx1dgNAFihsRuth+Gnt+2TsH0B7KCC0C/NZJI+/NL8nveJpjEyElcqhFNvvLrqnVt6hZ01tPJYLscFoJ2tI5f5M4IlF4wob7Ei41YLRVq/yOP41B+3fHHXeU91AgAykkZzknLJhfWbS1MaEdAO1Y2hJFeBFBV9/Q31wADzgAPlI1+WOuAr7NdHjUyr95XRpjPxip81biWkuOPrpSB16gHrqW+dRZ1/9DgzxPOYEhMyGDVa5V0RiugeNGtHO07d46EUSwQ+zYZv62ZkF0FglnzBWia94spd0w== brian@bkeifer",
             "metadata": {
                 "description": "SSH RSA public key file as a string."
             }
@@ -90,13 +90,13 @@
             "defaultValue": "latest",
             "allowedValues": [
                 "7.1.1",
-		"8.0.0",
+		        "8.0.0",
                 "latest"
             ],
             "metadata": {
                 "description": "PAN-OS version."
             }
-        }, 
+        },
         "imageSku": {
             "type": "string",
             "defaultValue": "byol",
@@ -108,18 +108,18 @@
             "metadata": {
                 "description": "VM-Series model: BYOL or hourly pay-as-you-go (PAYG): Bundle 1 or Bundle 2"
             }
-        }, 
+        },
         "vmSize": {
             "type": "string",
             "defaultValue": "Standard_D3_v2",
             "allowedValues": [
                 "Standard_D3",
 		"Standard_D3_v2",
-                "Standard_D4", 
+                "Standard_D4",
 		"Standard_D4_v2",
 		"Standard_D5",
 		"Standard_D5_v2",
-                "Standard_A4"	    
+                "Standard_A4"
             ],
             "metadata": {
                 "description": "Azure VM size for VM-Series"
@@ -273,7 +273,7 @@
       "type": "Microsoft.Compute/availabilitySets",
       "name": "[parameters('availabilitySetName')]",
       "location": "[resourceGroup().location]"
-    }, 
+    },
     {
         "apiVersion": "[variables('apiVersion')]",
         "type": "Microsoft.Network/publicIPAddresses",
