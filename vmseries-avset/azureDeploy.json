@@ -378,6 +378,13 @@
                      "mode":"Incremental",
                      "addressPrefix":"[parameters('subnet2Prefix')]"
                   }
+              },
+               {
+                  "name":"desales.edu_web-subnet",
+                  "properties":{
+                     "mode":"Incremental",
+                     "addressPrefix":"10.1.3.0/27"
+                  }
                }
             ]
          }
