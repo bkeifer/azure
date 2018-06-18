@@ -280,6 +280,7 @@
         "name": "[variables('fwpublicIPName')]",
         "location": "[parameters('location')]",
         "properties": {
+            "mode": "Incremental",
             "publicIPAllocationMethod": "[variables('publicIPAddressType')]",
             "dnsSettings": {
                 "domainNameLabel": "[parameters('dnsNameForPublicIP')]"
@@ -350,6 +351,7 @@
             "subnets": [{
                 "name": "[parameters('subnet0Name')]",
                 "properties": {
+                    "mode": "Incremental",
                     "addressPrefix": "[parameters('subnet0Prefix')]",
                     "networkSecurityGroup": {
                         "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('nsgname-mgmt'))]"
@@ -358,11 +360,13 @@
             }, {
                 "name": "[parameters('subnet1Name')]",
                 "properties": {
+                    "mode": "Incremental",
                     "addressPrefix": "[parameters('subnet1Prefix')]"
                 }
             }, {
                 "name": "[parameters('subnet2Name')]",
                 "properties": {
+                    "mode": "Incremental",
                     "addressPrefix": "[parameters('subnet2Prefix')]"
                 }
             }]
@@ -384,6 +388,7 @@
             "ipConfigurations": [{
                 "name": "[concat('ipconfig', '0')]",
                 "properties": {
+                    "mode": "Incremental",
                     "privateIPAllocationMethod": "Dynamic",
                     "publicIPAddress": {
                         "id": "[resourceId('Microsoft.Network/publicIPAddresses', variables('fwpublicIPName'))]"
@@ -407,6 +412,7 @@
         },
         "properties": {
             "enableIPForwarding": true,
+            "mode": "Incremental",
             "ipConfigurations": [{
                 "name": "[concat('ipconfig', '1')]",
                 "properties": {
@@ -431,6 +437,7 @@
         },
         "properties": {
             "enableIPForwarding": true,
+            "mode": "Incremental",
             "ipConfigurations": [{
                 "name": "[concat('ipconfig', '2')]",
                 "properties": {
