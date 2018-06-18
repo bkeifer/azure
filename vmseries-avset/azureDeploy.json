@@ -379,13 +379,48 @@
                      "addressPrefix":"[parameters('subnet2Prefix')]"
                   }
               },
-               {
-                  "name":"desales.edu_web-subnet",
-                  "properties":{
-                     "mode":"Incremental",
-                     "addressPrefix":"10.1.3.0/27"
-                  }
+              {
+                 "name":"desales.edu_web-subnet",
+                 "properties":{
+                    "mode":"Incremental",
+                    "addressPrefix":"10.1.3.0/27"
+                 }
+             },
+             {
+                "name":"desales.edu_db-subnet",
+                "properties":{
+                   "mode":"Incremental",
+                   "addressPrefix":"10.1.3.32/27"
+                }
+            },
+            {
+               "name":"desales.edu_webapp-subnet",
+               "properties":{
+                  "mode":"Incremental",
+                  "addressPrefix":"10.1.3.128/25"
                }
+           },
+           {
+              "name":"dns-subnet",
+              "properties":{
+                 "mode":"Incremental",
+                 "addressPrefix":"10.1.3.64/27"
+              }
+          },
+          {
+             "name":"test-subnet",
+             "properties":{
+                "mode":"Incremental",
+                "addressPrefix":"10.1.254.0/24"
+             }
+         },
+          {
+             "name":"GatewaySubnet",
+             "properties":{
+                "mode":"Incremental",
+                "addressPrefix":"10.1.255.0/24"
+             }
+         }
             ]
          }
       },
