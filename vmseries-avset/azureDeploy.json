@@ -350,7 +350,6 @@
             "subnets": [{
                 "name": "[parameters('subnet0Name')]",
                 "properties": {
-                    "mode": "Incremental",
                     "addressPrefix": "[parameters('subnet0Prefix')]",
                     "networkSecurityGroup": {
                         "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('nsgname-mgmt'))]"
@@ -381,6 +380,7 @@
             "displayName": "[concat('NetworkInterfaces', '0')]"
         },
         "properties": {
+            "mode": "Incremental",
             "ipConfigurations": [{
                 "name": "[concat('ipconfig', '0')]",
                 "properties": {
